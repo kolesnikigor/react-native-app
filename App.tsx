@@ -1,7 +1,6 @@
 import React from "react";
 import {Platform, StatusBar, SafeAreaView, StyleSheet} from 'react-native';
 
-import {Photos} from './src/components/Photos';
 import {Navigation} from "./src/navigation";
 
 export default function App() {

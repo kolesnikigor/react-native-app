@@ -7,9 +7,9 @@ type Props = {
 
 export const PhotoItem = ({uri, onPressImage}: Props) => {
   return (
-      <TouchableHighlight style={styles.photoContainer} onPress={onPressImage}>
-        <Image style={styles.photo} source={{uri: uri}}/>
-      </TouchableHighlight>
+    <TouchableHighlight style={styles.photoContainer} onPress={onPressImage}>
+      <Image style={styles.photo} source={{uri: uri}}/>
+    </TouchableHighlight>
   )
 }
 

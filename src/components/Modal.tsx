@@ -1,6 +1,7 @@
 import React from "react";
 import {SafeAreaView, Text, Image, StyleSheet} from "react-native";
 import {useRoute, RouteProp} from "@react-navigation/native";
+import {Dimensions} from 'react-native';
 
 import {IPhoto} from '../hooks/useGetPhotos'
 
@@ -10,10 +11,10 @@ type RootStackParamList = {
 
 type DetailedPhotoRouteProp = RouteProp<RootStackParamList, "Modal">;
 
+const squareSide = Dimensions.get('window').width;
 
 export const Modal = () => {
   const route = useRoute<DetailedPhotoRouteProp>();
-
   const photo = route.params?.photo;
 
   return (<SafeAreaView>
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     fontSize: 24
   },
   image: {
-    height: 600,
-    width: 200
+    width: '100%',
+    height: squareSide
   }
 })

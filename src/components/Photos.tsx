@@ -7,9 +7,8 @@ import {LoadingSpinner} from "./Loading";
 import {useGetPhotos} from "../hooks/useGetPhotos"
 import {Routes} from "../navigation/Routes";
 
-export function Photos({navigation}: any) {
+export function Photos({navigation}: object) {
   const {isLoading, photos, onEndReached, isRefreshing, onRefresh} = useGetPhotos();
-
 
   return (
     <>
@@ -32,7 +31,7 @@ export function Photos({navigation}: any) {
       <StatusBar style="auto"/>
     </>
   )
-};
+}
 
 const styles = StyleSheet.create({
   container: {
